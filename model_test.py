@@ -1,7 +1,7 @@
 import torch
 import matplotlib.pyplot as plt
 from src.SpectraDataset import SpectraDataset
-from src.ANet import total_loss_function, SpectraModel
+from src.spectranet import total_loss_function, SpectraModel
 
 
 # =========================================================
@@ -30,7 +30,7 @@ def test(model, test_loader, device):
 if __name__ == '__main__':
 
     # 加载模型
-    checkpoint = torch.load("./ckpts/model.ckpt")
+    checkpoint = torch.load("./ckpts/model.ckpt", weights_only=True)
     if 'model_state_dict' in checkpoint:
         checkpoint = checkpoint['model_state_dict']
 

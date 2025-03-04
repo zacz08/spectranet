@@ -3,7 +3,7 @@ import os
 import torch.optim as optim
 from torch.utils.data import DataLoader
 from src.SpectraDataset import SpectraDataset
-from src.ANet import total_loss_function, SpectraModel
+from src.spectranet import total_loss_function, SpectraModel
 
 
 # =========================================================

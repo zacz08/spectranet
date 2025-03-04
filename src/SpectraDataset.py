@@ -9,8 +9,8 @@ class SpectraDataset(Dataset):
         self.data_split = data_split
         assert data_split in ['train','test'], f"Invalid data_split: {self.data_split}"
 
-        self.Rdataset = torch.load("./NeuralAdataset/R_dataset_1269x31.pt")  # (1269, 31)
-        self.Idataset = torch.load("./NeuralAdataset/I_dataset_449x31.pt")  # (449, 31)
+        self.Rdataset = torch.load("./NeuralAdataset/R_dataset_1269x31.pt", weights_only=True)  # (1269, 31)
+        self.Idataset = torch.load("./NeuralAdataset/I_dataset_449x31.pt", weights_only=True)  # (449, 31)
 
         set_random_seed(seed)
 
