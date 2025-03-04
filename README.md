@@ -2,23 +2,23 @@
 
 ## 1. Environment setting
 ```Shell
-conda create -n spectralnet python=3.8 -y
-conda activate spectralnet
+conda create -n spectranet python=3.8 -y
+conda activate spectranet
 conda install pytorch
 ```
 
 ## 2. Download the sorce code
 ```Shell
-git clone https://github.com/zacz08/spectralnet.git
-cd spectralnet
+git clone https://github.com/zacz08/spectranet.git
+cd spectranet
 ```
 
 ## 3. Train the model
 ```Shell
-python ANet_train.py
+python model_train.py
 ```
 
 ## 4. Test the model
 ```Shell
-python ANet_test.py
+python model_test.py
 ```
